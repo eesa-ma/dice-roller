@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer components {
+    .bg {
+        @apply  absolute inset-4 bg-[url('./images/bg.png')] bg-cover bg-center blur-[3px];
+    }
+    .divContainer {
+        @apply relative z-10 mt-5 flex flex-col space-y-5;
+    }
+    .head {
+        @apply text-7xl font-bold text-red-800 self-center;
+    }
+    .divElements{
+        @apply self-center font-bold text-xl text-white;
+    }
+    .diceBox {
+        @apply border-2 border-black py-2 rounded-2xl bg-black opacity-50;
+    }
+    .rollButton {
+        @apply border-2 border-black px-10 py-2 rounded-2xl bg-black opacity-50;
+    }
+}
