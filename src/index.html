@@ -11,12 +11,18 @@
         <h1 class="head">
             DICE ROLLER
         </h1>
-        <div class="divElements">
-            <label for="inputBox" class="bg-black opacity-50 py-2 px-5 rounded-2xl"># of dice</label>
+        <div class="divElements" >
+            <label for="inputBox" class="label"># of dice</label>
             <input type="number" value="1" min="1" id="inputBox" class="diceBox">
-            <button class="rollButton">Roll Dice</button>
+            <button class="rollButton" onclick="rollDice()">Roll Dice</button>
         </div>
+        <div id="diceResult" class="diceResult"></div>
+        <div class="self-center ml-10">
+            <div id="diceImages" class="flex gap-5 flex-wrap"></div>
+        </div>
+        
     </div>
+    
   <script src="./script.js"></script>
 </body>
 </html>

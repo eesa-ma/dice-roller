@@ -13,6 +13,8 @@
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-7xl: 4.5rem;
     --text-7xl--line-height: 1;
     --font-weight-bold: 700;
@@ -167,6 +169,18 @@
   }
 }
 @layer utilities {
+  .m-10 {
+    margin: calc(var(--spacing) * 10);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
+  }
+  .flex {
+    display: flex;
+  }
   .table {
     display: table;
   }
@@ -176,33 +190,27 @@
   .resize {
     resize: both;
   }
-  .rounded {
-    border-radius: 0.25rem;
+  .flex-wrap {
+    flex-wrap: wrap;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .self-center {
+    align-self: center;
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-black {
-    background-color: var(--color-black);
-  }
-  .px-5 {
-    padding-inline: calc(var(--spacing) * 5);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
   .underline {
     text-decoration-line: underline;
-  }
-  .opacity-0 {
-    opacity: 0%;
-  }
-  .opacity-50 {
-    opacity: 50%;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -254,6 +262,13 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-white);
   }
+  .label {
+    border-radius: var(--radius-2xl);
+    background-color: var(--color-black);
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2);
+    opacity: 50%;
+  }
   .diceBox {
     border-radius: var(--radius-2xl);
     border-style: var(--tw-border-style);
@@ -261,9 +276,11 @@
     border-color: var(--color-black);
     background-color: var(--color-black);
     padding-block: calc(var(--spacing) * 2);
+    text-align: center;
     opacity: 50%;
   }
   .rollButton {
+    cursor: pointer;
     border-radius: var(--radius-2xl);
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -272,6 +289,14 @@
     padding-inline: calc(var(--spacing) * 10);
     padding-block: calc(var(--spacing) * 2);
     opacity: 50%;
+  }
+  .diceResult {
+    align-self: center;
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
   }
 }
 @property --tw-border-style {
